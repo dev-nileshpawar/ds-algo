@@ -1,31 +1,31 @@
 class ToCurrencyString {
-    total = 0
+    #total = 0
     hundreds (val) {
         if(!Number.isNaN(val)) {
-            this.total+=val*100;    
+            this.#total+=val*100;    
         }
         return this;
     }
     tens (val) {
         if(!Number.isNaN(val)) {
-            this.total+=val*10;    
+            this.#total+=val*10;    
         }
         return this;
     }
     units (val) {
         if(!Number.isNaN(val)) {
-            this.total+=val;    
+            this.#total+=val;    
         }
         return this;
     }
     thousand (val) {
         if(!Number.isNaN(val)) {
-            this.total+=val*1000;    
+            this.#total+=val*1000;    
         }
         return this;
     }
     value () {
-        return this.total;
+        return this.#total;
     }
 }
 
