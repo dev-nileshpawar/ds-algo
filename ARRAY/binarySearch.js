@@ -13,11 +13,11 @@ const binarySearch = (input, key, preMax)=>{
     } else if (key < input[mid]) {
         const newArray = input.slice(0, mid);
         console.log("3---",newArray)
-        return binarySearch(newArray, key, preMax+mid)
+        return binarySearch(newArray, key, preMax)
     }
 
     return -1
 }
 
-const result = binarySearch([1,3,4,5,7,7,89, 90], 123, 0)
+const result = binarySearch([-123,0,1,3,4,5,7,7,89,90,123], 0, 0)
 console.log(result)
